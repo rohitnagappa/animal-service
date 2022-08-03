@@ -4,7 +4,7 @@ public class Duck extends Bird{
 
     @Override
     public boolean sing() {
-        System.out.println("As i am duck, so i'm singing Quack! Quack!...");
+        System.out.println("Quack! Quack!...");
         return true;
     }
 

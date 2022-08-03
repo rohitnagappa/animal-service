@@ -7,7 +7,7 @@ public class Rooster implements Animal {
 
     @Override
     public boolean sing(){
-        System.out.println("As i am rooster, so i am singing Cock-a-doodle-doo...");
+        System.out.println("Cock-a-doodle-doo");
         return true;
     }
 
