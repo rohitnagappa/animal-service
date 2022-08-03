@@ -21,4 +21,10 @@ public class Bird implements Animal {
         System.out.println("i am singing...");
         return true;
     }
+
+    @Override
+    public boolean swim() {
+        System.out.println("i cannot swim.");
+        return false;
+    }
 }

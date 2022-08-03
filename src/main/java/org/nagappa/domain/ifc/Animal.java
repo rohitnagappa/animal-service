@@ -4,4 +4,5 @@ public interface Animal {
     boolean fly();
     boolean walk();
     boolean sing();
+    boolean swim();
 }
