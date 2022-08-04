@@ -34,4 +34,21 @@ class RoosterTest {
     void testSwim(){
         assertFalse(rooster.swim());
     }
+    @Test
+    void testRussian(){
+        rooster = new Rooster("Russian");
+        rooster.sing();
+    }
+
+    @Test
+    void testDanish(){
+        rooster = new Rooster("Danish");
+        rooster.sing();
+    }
+
+    @Test
+    void testDutch(){
+        rooster = new Rooster("Dutch");
+        rooster.sing();
+    }
 }
