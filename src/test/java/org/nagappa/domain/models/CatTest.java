@@ -2,7 +2,8 @@ package org.nagappa.domain.models;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.nagappa.domain.ifc.Animal;
+import org.nagappa.domain.abs.Animal;
+import org.nagappa.domain.models.pets.Cat;
 
 import static org.junit.jupiter.api.Assertions.*;
 

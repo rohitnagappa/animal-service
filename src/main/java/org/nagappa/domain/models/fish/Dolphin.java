@@ -1,16 +1,16 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.fish;
 
-import org.nagappa.domain.ifc.Animal;
-import org.nagappa.domain.ifc.Fish;
+import org.nagappa.domain.abs.Animal;
+import org.nagappa.domain.abs.Fish;
 
-public class Dolphin implements Animal {
+public class Dolphin extends Animal {
 
     Fish fish;
 
     Dolphin(){
 
     }
-    Dolphin(Fish fish){
+    public Dolphin(Fish fish){
         this.fish = fish;
     }
 

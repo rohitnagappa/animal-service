@@ -1,6 +1,6 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.birds;
 
-public class Chicken extends Bird{
+public class Chicken extends Bird {
 
     @Override
     public boolean sing() {

@@ -1,15 +1,15 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.birds;
 
-import org.nagappa.domain.ifc.Animal;
+import org.nagappa.domain.abs.Animal;
 
 public class Parrot extends Bird {
 
     private Animal animalLivesWith;
 
-    Parrot(){
+    public Parrot(){
     }
 
-    Parrot(Animal animalLivesWith){
+    public Parrot(Animal animalLivesWith){
         this.animalLivesWith = animalLivesWith;
     }
 

@@ -1,8 +1,8 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.pets;
 
-import org.nagappa.domain.ifc.Animal;
+import org.nagappa.domain.abs.Animal;
 
-public class Cat implements Animal {
+public class Cat extends Animal {
     @Override
     public boolean fly() {
         System.out.println("As i am cat, so i cannot fly");

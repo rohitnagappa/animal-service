@@ -1,11 +1,15 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.fish;
 
-import org.nagappa.domain.ifc.Fish;
+import org.nagappa.domain.abs.Fish;
 
-public class ClownFish implements Fish {
+public class ClownFish extends Fish {
     private String size;
     private String color;
 
+    public ClownFish(){
+        this.size = "small";
+        this.color = "orange";
+    }
     @Override
     public boolean fly() {
         System.out.println("As i am clownfish, so i cannot fly");

@@ -1,0 +1,66 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'org.nagappa'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+ext {
+    set('springCloudVersion', "2021.0.3")
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+
+    //actuator to expose monitoring endpoint
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.7.2'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.2'
+
+    //config server client
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3'
+
+    // eureka server client dependencies
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    // distributed tracing
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+
+    //log aggregation
+    implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+
+    //monitoring , prepare the data in which promethus is expecting
+    implementation 'io.micrometer:micrometer-core:1.9.2'
+    implementation 'io.micrometer:micrometer-registry-prometheus:1.9.2'
+
+    // will help in writing custom metrics for micrometer
+    implementation  'org.springframework.boot:spring-boot-starter-aop:2.7.2'
+
+    // will be used to  implemente resileince patterns like circuit breaker, retry, rate limiter
+    implementation 'io.github.resilience4j:resilience4j-spring-boot2'
+    implementation 'io.github.resilience4j:resilience4j-circuitbreaker:1.7.1'
+    implementation 'io.github.resilience4j:resilience4j-timelimiter:1.7.1'
+
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

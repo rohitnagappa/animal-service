@@ -1,35 +1,35 @@
 package org.nagappa.domain.models;
 
-import org.nagappa.domain.ifc.Animal;
+import org.nagappa.domain.abs.Animal;
 
-public class Butterfly implements Animal {
+public class Butterfly extends Animal {
 
-    private boolean isCatP;
+    private boolean isCaterpillar;
 
-    Butterfly(){
+    public Butterfly(){
     }
     Butterfly(boolean isCatP){
-        this.isCatP = isCatP;
+        this.isCaterpillar = isCatP;
     }
 
     @Override
     public boolean fly() {
-        if(isCatP){
+        if(isCaterpillar){
             System.out.println("As i am catterpillar, i cannot fly");
         }else {
             System.out.println("As i am butterfly, i can fly");
         }
-        return !isCatP;
+        return !isCaterpillar;
     }
 
     @Override
     public boolean walk() {
-        if(isCatP){
+        if(isCaterpillar){
             System.out.println("As i am catterpillar, i can walk/crawl");
         }else {
             System.out.println("As i am butterfly, i cannot walk");
         }
-        return isCatP;
+        return isCaterpillar;
     }
 
     @Override
@@ -44,11 +44,11 @@ public class Butterfly implements Animal {
         return false;
     }
 
-    public boolean isCatP() {
-        return isCatP;
+    public boolean isCaterpillar() {
+        return isCaterpillar;
     }
 
-    public void setCatP(boolean catP) {
-        isCatP = catP;
+    public void setCaterpillar(boolean catP) {
+        isCaterpillar = catP;
     }
 }

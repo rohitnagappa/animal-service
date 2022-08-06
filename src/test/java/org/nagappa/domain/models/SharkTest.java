@@ -2,7 +2,8 @@ package org.nagappa.domain.models;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.nagappa.domain.ifc.Fish;
+import org.nagappa.domain.abs.Fish;
+import org.nagappa.domain.models.fish.Shark;
 
 import static org.junit.jupiter.api.Assertions.*;
 

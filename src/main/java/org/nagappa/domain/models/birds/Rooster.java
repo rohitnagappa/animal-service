@@ -1,19 +1,19 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.birds;
 
-import org.nagappa.domain.ifc.Animal;
+import org.nagappa.domain.abs.Animal;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Rooster implements Animal {
+public class Rooster extends Animal {
     private final Animal rooster = new Chicken();
 
     private String language = "English";
 
-    Rooster(){
+    public Rooster(){
 
     }
-    Rooster(String language){
+    public Rooster(String language){
         this.language = language;
     }
     private static final Map<String, String> lang;
@@ -58,4 +58,7 @@ public class Rooster implements Animal {
         return rooster.walk();
     }
 
+    public String getLanguage() {
+        return language;
+    }
 }

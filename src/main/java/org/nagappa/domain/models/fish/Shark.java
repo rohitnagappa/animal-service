@@ -1,10 +1,15 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.fish;
 
-import org.nagappa.domain.ifc.Fish;
+import org.nagappa.domain.abs.Fish;
 
-public class Shark implements Fish {
+public class Shark extends Fish {
     private String size;
     private String color;
+
+    public Shark(){
+        this.size = "large";
+        this.color = "grey";
+    }
 
     @Override
     public boolean fly() {

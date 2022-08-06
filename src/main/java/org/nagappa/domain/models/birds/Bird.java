@@ -1,8 +1,8 @@
-package org.nagappa.domain.models;
+package org.nagappa.domain.models.birds;
 
-import org.nagappa.domain.ifc.Animal;
+import org.nagappa.domain.abs.Animal;
 
-public class Bird implements Animal {
+public class Bird extends Animal{
 
     @Override
     public boolean fly() {
@@ -27,4 +27,5 @@ public class Bird implements Animal {
         System.out.println("i cannot swim.");
         return false;
     }
+
 }
